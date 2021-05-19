@@ -22,9 +22,6 @@ class CreateTravelsTable extends Migration
             $table->text('description')->nullable();
             $table->float('price', 10, 2);
             $table->timestamps();
-
-
-
         });
     }
 
