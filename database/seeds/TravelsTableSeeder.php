@@ -17,7 +17,9 @@ class TravelsTableSeeder extends Seeder
         $new_travel_object = new Travel();
         $new_travel_object->destination = $faker->city();
         $new_travel_object->num_people = $faker->numberBetween(1, 10);
-        $new_travel_object->type = $faker->randomElements(['famiglia', 'camping', 'amici', 'erasmus']);
+        $new_travel_object->type = $faker->randomElements(['famiglia', 'camping', 'amici', 'erasmus'])[0];
+        // var_dump($faker->randomElements(['famiglia', 'camping', 'amici', 'erasmus'])[0]);
+        // die();
         $new_travel_object->date = $faker->date();
         $new_travel_object->price = $faker->numberBetween(100, 4000);
         $new_travel_object->save();
